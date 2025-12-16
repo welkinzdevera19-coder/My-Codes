@@ -1,0 +1,98 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url(https://img.freepik.com/premium-vector/lavender-fields-france-provence_1250048-1085.jpg);
+  background-size: cover;
+  animation: gradientBG 12s ease infinite;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Animated background */
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* Login form container */
+.login-form {
+  background-image: url(photo/1765123368950.jpg);
+  background-size: cover;
+  padding: 3rem;
+  border-radius: 16px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  text-align: center;
+  color: #fff;
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.login-form h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: uppercase;
+}
+
+.login-form label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #288b5a;
+}
+
+/* Input fields */
+.login-form input[type="text"] {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(10, 10, 10, 0.2);
+  color: #080808;
+  font-size: 1rem;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.login-form input[type="text"]::placeholder {
+  color: #fdfdfc;
+}
+
+.login-form input[type="text"]:focus {
+  background: rgba(57, 238, 81, 0.3);
+  outline: none;
+  box-shadow: 0 0 8px #1f201f;
+}
+
+/* Submit button */
+.login-form input[type="submit"] {
+  width: 100%;
+  padding: 0.75rem;
+  background: #4CAF50;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.login-form input[type="submit"]:hover {
+  background: #43a047;
+  transform: scale(1.05);
+}

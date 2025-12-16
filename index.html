@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://img.freepik.com/premium-vector/lavender-fields-france-provence_1250048-1085.jpg);
+    background-size: cover;
+    animation: gradientBG 12s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+@keyframes gradientBG {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+
+.login-form {
+    background-image: url(photo/1765123368950.jpg);
+    background-size: cover;
+    padding: 3rem;
+    border-radius: 16px;
+    width: 320px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    color: #fff;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.login-form h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+}
+
+.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #288b5a;
+}
+
+
+.login-form input[type="text"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background: rgba(10, 10, 10, 0.2);
+    color: #080808;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.login-form input[type="text"]::placeholder {
+    color: #fdfdfc;
+}
+
+.login-form input[type="text"]:focus {
+    background: rgba(57, 238, 81, 0.3);
+    outline: none;
+    box-shadow: 0 0 8px #1f201f;
+}
+
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 0.75rem;
+    background: #4CAF50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.login-form input[type="submit"]:hover {
+    background: #43a047;
+    transform: scale(1.05);
+}
+
+    </style>
+
+
+</head>
+<body>
+
+    <form action="index2.html" method="get" class="login-form" id="loginForm" autocomplete="off">
+    <h2>Login</h2>
+    <label for="username">Name</label>
+    <input id="username" name="username" type="text" placeholder="Enter username" required />
+    <input type="submit" value="Login" />
+</form>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const enteredUser = document.getElementById('username').value.trim();
+
+
+    if (enteredUser === "Welkinz" || enteredUser === "Mariel") {
+    alert('Login successful!');
+
+    window.location.href = "index2.html";
+    } else {
+    alert('Incorrect username. Please try again.');
+    document.getElementById('username').value = '';
+    document.getElementById('username').focus();
+    }
+});
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=div, initial-scale=1.0">
+    <title>Photos</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(https://www.pixelstalk.net/wp-content/uploads/2016/06/Best-HD-Backgrounds-Photos-Download.jpg);
+            background-size: cover;
+        }
+        img{
+            height: 350px;
+            width: 200px;
+        }
+
+        .container{
+            position: relative;
+            width: 200px;
+            height: 300px;
+            transform-style: preserve-3d;
+            animation: animate 20s linear infinite;
+        }
+
+        @keyframes animate{
+            0%{
+                transform: perspective(1000px) rotate(0deg);
+            }
+            100%{
+                transform: perspective(1000px) rotateY(360deg);
+            }
+        }
+
+        .container span{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            transform: rotateY(calc(var(--i)* 45deg)) translateZ(400px);
+            -webkit-box-reflect: below 0px linear-gredient(transparent, transparent, #0004);
+        }
+
+        .container span img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <span style="--i:1"><img src="photo/1765125750770.jpg" alt=""></span>
+        <span style="--i:2"><img src="photo/1765123368950.jpg" alt=""></span>
+        <span style="--i:3"><img src="photo/1765125877967.jpg" alt=""></span>
+        <span style="--i:4"><img src="photo/1765125884936.jpg" alt=""></span>
+        <span style="--i:5"><img src="photo/1765125981212.jpg" alt=""></span>
+        <span style="--i:6"><img src="photo/1765125962049.jpg" alt=""></span>
+        <span style="--i:7"><img src="photo/1765126060293.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765126064416.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125904604.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765126035890.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765126020648.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765123453852.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125474053.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125464876.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765126030958.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125969562.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125960320.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125882750.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125941437.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125607650.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125711668.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/IMG_20251012_144403_892.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765126062477.jpg" alt=""></span>
+        <span style="--i:8"><img src="photo/1765125744804.jpg" alt=""></span>
+    </div>
+</body>
+</html>
